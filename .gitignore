@@ -1,0 +1,8 @@
+.DS_Store
+composer.phar
+composer.lock
+vendor
+files
+tests/api/npm-debug.log
+tests/api/node_modules
+.env

@@ -1,0 +1,6 @@
+{
+    "name": "Example BulletPHP-Powered Application",
+    "require": {
+        "vlucas/bulletphp": "1.x"
+    }
+}
