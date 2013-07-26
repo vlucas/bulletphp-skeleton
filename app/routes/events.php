@@ -13,9 +13,27 @@ $app->path('events', function($request) use($app) {
     $app->get(function($request) use($app) {
 
         $items = array(
-            new Event(array('title' => 'Test Event 1')),
-            new Event(array('title' => 'Test Event 2')),
-            new Event(array('title' => 'Test Event 3'))
+            array(
+                'id' => 1,
+                'title' => 'Test Event 1',
+                'description' => 'A super cool event',
+                'active' => true,
+                'date_created' => new \DateTime()
+            ),
+            array(
+                'id' => 2,
+                'title' => 'Test Event 2',
+                'description' => null,
+                'active' => true,
+                'date_created' => new \DateTime()
+            ),
+            array(
+                'id' => 3,
+                'title' => 'Test Event 3',
+                'description' => 'A super cool event',
+                'active' => false,
+                'date_created' => new \DateTime()
+            )
         );
 
         $app->format('json', function($request) use($app, $items) {

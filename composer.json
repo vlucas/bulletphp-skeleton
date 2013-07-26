@@ -1,6 +1,19 @@
 {
-    "name": "Example BulletPHP-Powered Application",
+    "name": "BulletPHP Example Skeleton App",
+    "authors": [
+        {
+            "name": "Vance Lucas",
+            "email": "vance@vancelucas.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "": "app/src/"
+        }
+    },
     "require": {
+        "php": ">=5.3.0",
+
         "vlucas/bulletphp": "1.x"
     }
 }

@@ -3,26 +3,12 @@
 $app->path(array('/', 'index'), function($request) use($app) {
     $app->get(function($request) use($app) {
         $data = array(
-            'class' => array('index'),
-            'rel' => array('church_list'),
-            'actions' => array(
-                array(
-                    'name' => 'church_geosearch',
-                    'rel' => array('geosearch', 'search'),
-                    'title' => t('Churches Nearby'),
-                    'method' => 'GET',
-                    'href' => $app->url('/churches'),
-                    'fields' => array(
-                        array('name' => 'lat', 'type' => 'float'),
-                        array('name' => 'lng', 'type' => 'float')
-                    )
-                )
-            ),
+            'rel' => array('index'),
             'links' => array(
                 array(
-                    'rel' => array('church_list'),
-                    'title' => t('Churches'),
-                    'href' => $app->url('/churches')
+                    'rel' => array('user_list'),
+                    'title' => t('Users'),
+                    'href' => $app->url('/users')
                 ),
                 array(
                     'rel' => array('event_list'),

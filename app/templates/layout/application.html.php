@@ -26,6 +26,8 @@ $app = app();
           <ul id="nav_sidebar">
           <li><a href="<?php echo $app->url('/'); ?>">Dashboard</a></li>
           <li><a href="<?php echo $app->url('/events'); ?>">Events</a></li>
+          <li><a href="<?php echo $app->url('/messages'); ?>">Messages</a></li>
+          <li><a href="<?php echo $app->url('/users'); ?>">Users</a></li>
         <ul>
         </div>
       </div>

@@ -1,0 +1,24 @@
+global:
+  env:
+    - BULLET_ENV: production
+
+# Web instance
+web1:
+  name: bullet-example-app
+  index_list: [index.php]
+  document_root: /web
+  after_build:
+    - "rm -rf vendor composer.lock"
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install;"
+  php_date_timezone: "UTC"
+  php_file_uploads: "1"
+  php_max_execution_time: 60
+  php_version: 5.4.14
+  php_extensions:
+    - curl
+    - http
+    - intl
+    - mbstring
+    - mcrypt
+    - zip
+

@@ -8,7 +8,6 @@ ini_set("session.use_only_cookies", '1'); // Don't allow session_id in URLs
 
 // ENV globals
 define('BULLET_ENV', $request->env('BULLET_ENV', 'development'));
-define('BULLET_ROOT', dirname(__DIR__));
 
 // Production setting switch
 if(BULLET_ENV == 'production') {
@@ -89,3 +88,4 @@ function t($string) {
     }
     return $string;
 }
+
